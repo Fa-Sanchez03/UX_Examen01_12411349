@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
 
         <header className="fixed inset-x-0 top-0 z-20 bg-gradient-to-b from-black/90 via-black/60 to-transparent">
-            <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:h-20 md:px-8">
+            <div className="flex h-16 items-center justify-between px-6 md:h-20 md:px-16">
                 {/*Lado izquierdo*/}
                 <div className="flex items-center gap-6">
                     <Logo />
