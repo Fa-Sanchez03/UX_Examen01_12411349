@@ -1,9 +1,8 @@
-import Banner from "@/components/organisms/Banner";
+import HomeTemplate from "@/components/templates/HomeTemplate";
+
 
 export default function Home() {
   return (
-    <div className="bg-black text-white">
-      <Banner />
-    </div>
+    <HomeTemplate />
   );
 }

@@ -5,7 +5,7 @@ export default function Banner() {
         <section className="relative h-[60vh] min-h-[400px] md:h-[70vh] text-white">
             {/* Imagen de Fondo*/}
             <div className = "absolute inset-0">
-                <div className = "h-full wfull bg-[url('/bannerImage.jpg')] bg-cover bg-center" />
+                <div className = "h-full wfull bg-[url('/images/bannerImage.jpg')] bg-cover bg-center" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"/>"
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/10 to-transparent"/>
             </div>
