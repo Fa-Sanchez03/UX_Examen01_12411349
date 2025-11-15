@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Examen 01 UX – Replica de Netflix
 
-## Getting Started
+## Introducción
+Este examen consiste en replicar la aplicación de “Netflix” utilizando una variedad de tecnologías de Front End como React, TailwindCSS y las tecnologías fuentes como HTML, CSS y JS. Con esto nosotros los estudiantes debemos de demostrar una capacidad adecuada de utilizar estas tecnologías de manera correcta y ordenada.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologías Usadas
+- Next.js 16  
+- React  
+- TailwindCSS  
+- HTML  
+- CSS  
+- JS  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Explicación de Desarrollo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+El primer paso del examen fue estructurar los componentes que vamos a usar en un **Atomic Design** (Átomos, Moléculas, Organismos, Templates y Pages) para tener una buena organización tras el curso del desarrollo del examen. 
 
-## Learn More
+### 🔹 NavBar
+Para el NavBar se crearon componentes como el logo, botones e íconos como **átomos**.  
+El menú de navegación, al igual que la barra de búsqueda, fueron hechos dentro de **moléculas**, y todo el conjunto fue implementado en un **organismo** que sería el NavBar.
 
-To learn more about Next.js, take a look at the following resources:
+Para hacer esta parte más “Netflixy”, se implementaron casos para cuando el usuario le hace *hover* a cada elemento, dándole un cambio de tono.  
+También se debe tener en cuenta que el NavBar es un **componente cliente**, ya que responde a eventos dentro del navegador.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🔹 Banner
+Para el Banner se utilizaron botones, textos, fondo (átomos) al igual que un conjunto de botones (molécula – BannerButtons).  
+Al principio se muestra como una imagen normal de fondo; al tocar el botón de reproducción, se muestra un tráiler **usando hooks** para ver si el usuario ha interactuado o no con el botón.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🔹 Carruseles (Rows)
+Los carruseles fueron construidos como **organismos**.  
+Se creó un archivo de datos (hardcoded) donde varias series/películas fueron puestas con sus imágenes respectivas.
 
-## Deploy on Vercel
+Cada sección tiene scroll horizontal, el cual se usa con mayor frecuencia si la pantalla se hace más pequeña, ya que se miraría menos contenido.  
+Cada serie tiene efectos de hover, en los cuales la imagen se pondrá oscura y se mostrará una breve descripción de la serie/película en cuestión.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🔹 Responsividad
+Algo que se debe mencionar es que la mayoría de las cosas que hacen que el sitio se sienta “responsive” fue por el uso de **TailwindCSS**, así uno como desarrollador no tiene que jugar con sizes específicos de pantalla para cambiar ciertos datos de CSS.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🔹 Datos Hardcoded
+Previamente se mencionó un archivo de datos, y aquí es donde varios datos como la imagen a usar, la descripción y el título de las series/películas de los carruseles fueron escritos (hardcoded).  
+En el futuro, con implementación de Bases de Datos, sería más profesional tener este “archivo” como una base real de series/películas.
+
+---
